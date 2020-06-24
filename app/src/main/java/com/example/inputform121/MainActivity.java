@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonOk =(Button) findViewById(R.id.button_ok);
-        Button buttonClean =(Button) findViewById(R.id.button_clean);
+        Button buttonOk = (Button) findViewById(R.id.button_ok);
+        Button buttonClean = (Button) findViewById(R.id.button_clean);
         final EditText inputUserName = (EditText) findViewById(R.id.input_user_name);
         final EditText inputUserMail = (EditText) findViewById(R.id.input_user_email);
         final TextView successText = (TextView) findViewById(R.id.success_text);
@@ -32,11 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String userName = inputUserName.getText().toString();
-                String userEmail = inputUserMail.getText().toString();
-                successText.append(" для пользователя " + userName);
-                successText.append(" на электронный адрес " + userEmail);
-                successText.setVisibility(View.VISIBLE);
+                String userName = inputUserName.getText().toString().trim();
+                String userEmail = inputUserMail.getText().toString().trim();
+                if (!userName.equals("") || !userEmail.equals("")) {
+                    //successText.setText("");
+                    successText.setText("Подписка на рассылку успешно оформлена для пользователя " + userName + " на электронный адрес " + userEmail);
+                    successText.setVisibility(View.VISIBLE);
+                }
+                else {
+                    //successText.setText("");
+                    successText.setText("Одно из полей пустое, заполите имя/email");
+                    successText.setVisibility(View.VISIBLE);
+
+                }
             }
         });
     }

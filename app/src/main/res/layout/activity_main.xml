@@ -77,7 +77,6 @@
             android:id="@+id/success_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/success_text"
             android:textAlignment="center"
             android:textSize="18sp"
             android:visibility="invisible" />
