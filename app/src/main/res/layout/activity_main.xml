@@ -79,6 +79,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textSize="18sp"
+            android:text="@string/success_text"
             android:visibility="invisible" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

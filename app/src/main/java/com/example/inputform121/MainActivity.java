@@ -34,17 +34,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String userName = inputUserName.getText().toString().trim();
                 String userEmail = inputUserMail.getText().toString().trim();
+                successText.setText("");
                 if (!userName.equals("") || !userEmail.equals("")) {
-                    //successText.setText("");
-                    successText.setText("Подписка на рассылку успешно оформлена для пользователя " + userName + " на электронный адрес " + userEmail);
-                    successText.setVisibility(View.VISIBLE);
+                    successText.setText(getResources().getString(R.string.success_text, userName, userEmail));
                 }
                 else {
-                    //successText.setText("");
-                    successText.setText("Одно из полей пустое, заполите имя/email");
-                    successText.setVisibility(View.VISIBLE);
-
+                    successText.setText(getResources().getString(R.string.text_fail));
                 }
+                successText.setVisibility(View.VISIBLE);
             }
         });
     }

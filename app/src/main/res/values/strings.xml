@@ -4,4 +4,6 @@
     <string name="text_user_email">Электронная почта</string>
     <string name="button_ok">ОК</string>
     <string name="button_clean">Очистить</string>
+    <string name="success_text">Подписка на рассылку успешно оформлена для пользователя %s на электронный адрес %s"</string>
+    <string name="text_fail">Одно из полей не заполнено</string>
 </resources>
